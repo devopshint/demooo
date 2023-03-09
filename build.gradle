@@ -22,9 +22,6 @@ jacoco {
 }
 
 
-tasks.withType(Test) {
-    jacoco.includeNoLocationClasses = true
-}
 
 
 jacocoTestReport {
@@ -46,8 +43,3 @@ test {
     useJUnitPlatform()
 }
 
-tasks.withType(Test) {
-    jacoco.includeNoLocationClasses = true
-    jacoco.excludes = ['jdk.internal.*']
-}
-    

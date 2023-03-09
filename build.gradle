@@ -69,4 +69,3 @@ test {
     ])
 
     executionData.from = files("${project.buildDir}/jacoco/test.exec")
-}

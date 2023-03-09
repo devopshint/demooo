@@ -4,33 +4,32 @@ plugins {
    
 }
 
-group 'com.devopshint'
-version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
 
 test {
-    finalizedBy jacocoTestReport
+    useJUnitPlatform()
 }
-
-
 
 jacoco {
-    toolVersion = "0.8.8"
+    toolVersion '0.8.0'
 }
 
+tasks.withType(Test) {
+    jacoco.includeNoLocationClasses = true
+}
 
+tasks.create(name: "testCoverage", type: JacocoReport, dependsOn: "test") {
 
+    group = "Reporting"
+    description = "Generate Jacoco coverage reports for the test build."
 
-jacocoTestReport {
     reports {
-        csv.enabled true
+        html.enabled = true
+        xml.enabled = true
     }
-}
-
-
 
 
 dependencies {

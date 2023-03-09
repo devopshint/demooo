@@ -24,7 +24,7 @@ jobs:
       run: chmod +x gradlew
       
     - name: Run Coverage
-      run: ./gradlew jacocoTestReport     
+      run: ./gradlew testCoverage
 
     - name: Upload JaCoCo coverage report
       uses: actions/upload-artifact@v3

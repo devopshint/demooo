@@ -1,13 +1,23 @@
 package com.devopshint.StringPalindrome;
 
-import org.joda.time.LocalTime;
+public class Calculator {
+  public static double add(double x, double y) {
+    return x + y;
+  }
 
-public class HelloWorld {
-  public static void main(String[] args) {
-    LocalTime currentTime = new LocalTime();
-    System.out.println("The current local time is: " + currentTime);
-    
-    Greeter greeter = new Greeter();
-    System.out.println(greeter.sayHello());
+  public static double subtract(double x, double y) {
+    return x - y;
+  }
+
+  public static double multiply(double x, double y) {
+    return x * y;
+  }
+
+  public static double divide(double x, double y) {
+    if (y == 0) {
+      System.out.println("Cannot divide by 0");
+      return 0;
+    }
+    return x / y;
   }
 }

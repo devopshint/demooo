@@ -1,4 +1,4 @@
-package com.madrapps.jacoco;
+package com.devopshint.jacoco;
 
 public class Utils {
 

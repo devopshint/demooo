@@ -7,6 +7,9 @@ plugins {
 group 'com.devopshint'
 version '1.0-SNAPSHOT'
 
+repositories {
+    mavenCentral()
+}
 
 test {
     finalizedBy jacocoTestReport

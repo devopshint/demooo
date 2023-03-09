@@ -27,6 +27,9 @@ jobs:
       uses: gradle/gradle-build-action@v2.3.2
       with:
         arguments: build
+        
+    - name: Run Coverage
+      run: ./gradlew testCoverage     
 
     - name: Upload JaCoCo coverage report
       uses: actions/upload-artifact@v3

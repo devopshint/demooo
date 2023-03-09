@@ -47,25 +47,4 @@ test {
 }
 
 
-    def excludes = [
-            '**/*Test*.*',
-            '**/actions/*.*',
-            '**/core/*.*',
-            '**/markers/*.*',
-            '**/services/**/*.*',
-            '**/toolwindow/*.*',
-            '**/utils/*.*'
-    ]
-
-    def javaClasses = fileTree(dir: "${buildDir}/classes/java/main", excludes: excludes)
     
-    classDirectories.from = files([javaClasses])
-
-   
-
-    sourceDirectories.from = files([
-            "$project.projectDir/src/main/java",
-            "$buildDir/generated/source/kapt/test"
-    ])
-
-    executionData.from = files("${project.buildDir}/jacoco/test.exec")

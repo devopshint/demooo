@@ -31,7 +31,6 @@ tasks.create(name: "testCoverage", type: JacocoReport, dependsOn: "test") {
     reports {
         html.enabled = true
         xml.enabled = true
-        html.destination "/build/reports/jacoco/testCoverage/jacocoHtml"
     }
 
 
